@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+
+body {
+	background-color: #1a1a1a;
+	margin: 0px;
+	text-align: center;
+}
+
+h1 {
+	font-size: 48px;
+	color: #F5E9DA;
+	font-family: 'Titan One', cursive;
+	font-weight: 300;
+	animation: apparition2 3.0s ease-out;
+	margin-bottom: 10px;
+}
+
+#contour {
+	width: 180px;
+	margin: 0px auto; /*centrer une div horizontalement sur body*/
+	border-top: 4px solid #ffb380;
+	height: 60px;
+	animation: debut 3.5s;
+}
+
+@keyframes debut {
+		0% {
+			width: 0px;
+		}
+
+		86% {
+			width: 0px;
+		}
+		100% {
+
+		}
+}
+
+#ligne1 {
+	display: flex;
+	align-items: center;
+}
+
+#cercle {
+	margin-right: 100px;
+	margin-left: 30px;
+	height: 408px;
+	width: 400px;
+
+	position: relative; /*pour le centrage vertical de la boite*/
+}
+
+#limage0 {
+	display: flex;            /*pour centrer l'image*/
+	align-items: center;
+	justify-content: center;
+
+	position: absolute;          /*pour centrer la boite*/
+	top: 50%;
+	transform: translateY(-50%);
+	width: 100%;
+}
+
+#image0 {
+	border-radius: 50%;
+	width: 300px;
+	height: 300px;
+	animation: apparition 1.7s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+@keyframes apparition {
+	from {
+		height: 0px;
+		width: 0px;
+	}
+	12% {
+		height: 0px;
+		width: 0px;
+	}
+	to {
+	}
+}
+
+#photo {
+	display: flex;
+	align-items: center;
+	animation: apparition3 3s;
+	border-radius: 40px;
+	padding : 30px;
+}
+
+@keyframes apparition3 {
+	0% {
+		opacity: 0;
+	}
+	
+	50% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes apparition2 {
+	0% {
+		opacity: 0%;
+	}
+
+	29% {
+		opacity: 0%;
+		transform: translateY(-100px);
+	}
+	100% {
+		opacity: 100%;
+	}
+
+}
+
+.fleche{
+	max-width: 100px;
+	height: auto;
+	display: flex;
+	align-items: center;
+	margin-right: 12px;
+	margin-left: 12px;
+	cursor: pointer;
+}
+
+#photo .img {
+	text-align: center;
+	max-width: 220px;
+	height: auto;
+	border-radius: 10%;
+	margin-right: 12px;
+	margin-left: 12px;
+	display: none;
+}
+
+#mesphoto .imgON {
+	display: block;
+	text-align: center;
+	max-width: 220px;
+	height: auto;
+	border-radius: 15px;
+	margin-right: 12px;
+	margin-left: 12px;
+	animation: zloup 1.5s;
+
+}
+
+@keyframes zloup {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+.divimg {
+	text-align: right;
+}
+
+#mesphoto img {
+	text-align: center;
+	max-width: 220px;
+	height: auto;
+	border-radius: 10%;
+	margin-right: 12px;
+	margin-left: 12px;
+	display: none;
+
+}
+
+#mesphoto {
+	display: flex;
+	align-items: center;
+}
+
+#photo .error {
+	animation: nope 0.4s 
+}
+
+@keyframes nope {
+	20% {
+		transform:  translateX(-10px);
+	}
+	40% {
+		transform:  translateX(+10px);
+	}
+	60% {
+		transform:  translateX(-10px);
+	}
+	80% {
+		transform:  translateX(+10px);
+	}
+}
+
